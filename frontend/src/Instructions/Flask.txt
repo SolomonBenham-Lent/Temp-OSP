@@ -1,0 +1,24 @@
+STEP 1:
+    Create backend folder and app.py as normal
+
+STEP 2:
+    in cd backend create and go into venv
+
+    Create : "python3 -m venv venv"
+    Move Into : "venv\Scripts\activate"
+
+STEP 3: 
+    run the Flask project
+
+    in cd backend "python app.py"
+
+
+
+NEEDED INSTALLS
+    pip install flask flask-cors
+
+    pip install mysql-connector-python
+
+
+IMPORTANT
+    can not show POST api calls in browser

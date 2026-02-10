@@ -1,0 +1,70 @@
+Part 1: Creating the ERD
+
+    Start a New Model
+
+        Open MySQL Workbench.
+        Click File > New Model.
+        A new tab will open. In the middle section under "Physical Schemas," double-click mydb to rename your database schema (e.g., store_db).
+
+    Add a Diagram
+
+        Double-click Add Diagram (icon looks like an EER diagram).
+        You will see a grid canvas. This is where you draw your diagram.
+
+    Create Tables (Entities)
+
+        Press the Table icon (or press T) in the vertical toolbar on the left.
+        Click anywhere on the grid to drop a new table.
+
+        Double-click the new table to open the editor at the bottom.
+
+            Table Name: Give it a name (e.g., Users).
+            Columns: Click in the columns list to add fields (e.g., id, username, email).
+            Datatypes: Set types like INT, VARCHAR(45), etc.
+            Flags: Check PK (Primary Key), NN (Not Null), AI (Auto Increment) as needed.
+
+    Create Relationships
+
+        Use the Relationship Tools in the left sidebar (lines with crow's feet endings).
+        1:n (One-to-Many): Click the "Non-Identifying 1:n" tool (dashed line). Click the Child table first (the "Many" side), then click the Parent table (the "One" side).
+        Workbench automatically adds the foreign key column for you.
+
+        IMPORTANT!!!! the names under "Foreign Key Name" in the "Foreign Key" section need to be different to the primary key
+
+Part 2: Convert to Database (Forward Engineer)
+
+Once your diagram is finished, you push it to your MySQL server.
+
+    Connect to Database
+
+        Go to the top menu: Database > Forward Engineer... (or press Ctrl+G / Cmd+G).
+
+    Connection Options
+
+        Select your stored connection (usually "Local instance 3306").
+
+        Click Next.
+
+    Options
+
+        You can usually leave these settings as default. If you are overwriting an existing database, check DROP Objects Before Each CREATE Object.
+
+        Click Next.
+
+    Select Objects
+
+        Make sure "Export MySQL Table Objects" is checked.
+
+        Click Next.
+
+    Review SQL
+
+        Workbench generates the raw SQL code for you. You can review it here.
+
+        Click Execute.
+
+    Finish
+
+        If successful, you will see a "Forward Engineer Finished Successfully" message.
+
+        Go back to the Home tab, open your Local Connection, and check the "Schemas" tab on the left. Your new database and tables will be there, ready for data.

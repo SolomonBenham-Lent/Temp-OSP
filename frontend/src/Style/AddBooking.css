@@ -1,0 +1,99 @@
+:root {
+  --primary_colour: #a7c957;
+  --secondary_colour: #bdd781;
+  --accent_colour: #f2e8cf;
+
+  --primary_text: #386641;
+  --secondary_text: #181818;
+  --accent_text: #ffffff;
+
+  --card_colour_1: #479dbc;
+  --card_colour_2: #408eaa;
+  --card_colour_3: #35768d;
+
+  --product-button-bg: #ececec;
+  --input-border: #ccc;
+  --input-bg: #ffffff;
+  --section-bg: #f9f9f9;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+}
+
+.active-content {
+  display: block;
+}
+
+.option1,
+.option2,
+.option3 {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 60px;
+  background-color: var(--product-button-bg);
+  color: var(--primary_text);
+  padding: 0;
+  border: 2px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.option1:hover,
+.option2:hover,
+.option3:hover {
+  background-color: #d4d4d4;
+  border-color: #666;
+}
+
+.option1.active,
+.option2.active,
+.option3.active {
+  border-color: #a7c957;
+  box-shadow: 0 0 0 3px rgba(167, 201, 87, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bookingContainer {
+    padding: 20px 15px;
+  }
+
+  .section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .productContainer {
+    gap: 10px;
+  }
+
+  .option1,
+  .option2,
+  .option3 {
+    min-width: 100px;
+    max-width: 100%;
+    flex: 1 1 calc(33.333% - 7px);
+    padding: 12px 10px;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,47 @@
+.popupContainer {
+  background-color: rgb(116, 116, 116);
+  border-radius: 25px;
+  padding: 10px;
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+.signIn-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0000ee; /* Default link blue */
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit; /* Matches surrounding text font */
+}
+
+.signIn-button:hover {
+  color: #551a8b; /* Link hover color */
+}
+
+.error {
+  background-color: #fee;
+  color: #822;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid red;
+}
+
+/* Loading spinner styles */
+/* 1. Define the rotation path */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. Apply to your element */
+.loading {
+  animation: spin 3s linear infinite;
+  width: 30px;
+  height: 30px;
+}

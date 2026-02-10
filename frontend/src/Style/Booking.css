@@ -1,0 +1,37 @@
+.booking-card {
+  background-color: #585858;
+  border: 3px solid #333333;
+  border-radius: 25px;
+  margin: 20%;
+  width: 50rem;
+  height: 10rem;
+}
+
+.booking-info {
+  text-align: left;
+  left: 1px;
+  padding: 20px;
+}
+
+.option-display {
+  font-size: 1.5em;
+  color: white;
+}
+
+.datetime-display {
+  font-size: 1.2em;
+  color: white;
+}
+
+.message-display {
+  font-size: 1em;
+  color: white;
+
+  border: 5px solid black;
+  border-color: black;
+}
+
+.address-display {
+  font-size: 1em;
+  color: white;
+}
